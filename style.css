@@ -1,0 +1,269 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.logo_mario {
+    width: 300px;
+}
+
+.logo-mario-luigi {
+    height: 500px;
+}
+
+button {
+    color: white;
+    /*cor do texto dentro do botão.*/
+    background-color: #C51111;
+    /*cor do de fundo do botão.*/
+    border-radius: 3px;
+    /*arredondar a borda do botão.*/
+    border: none;
+    /*cor da borda do botão.*/
+    width: 200px;
+    /*largura do botão.*/
+    height: 50px;
+    /*altura do botão.*/
+    cursor: pointer;
+    /*alterar o formato do cursor ao passar por cima do botão.*/
+    text-transform: uppercase;
+    /*Deixar o texto dentro do botão todo em letras maiúsculas.*/
+    font-weight: bold;
+    /*Deixar o texto dentro do botão todo em negrito.*/
+    margin-top: 30px;
+    /* Cria uma margem na parte superior do botão.*/
+}
+
+button:hover {
+    background-color: #008000;
+    transition: 0.5s ease-in-out;
+}
+
+body {
+
+    height: 100vh;
+    /* Preenche todo o espaço de altura da tela.*/
+
+}
+
+.caixa-mae {
+
+    display: flex;
+    /* Coloca todos os itens um ao lado do outro, ou caixas uma ao lado da outra.*/
+    align-items: center;
+    /* Alina os itens no centro. Ajusta na vertical.*/
+    justify-content: space-around;
+    /* Espaçamento entorno das caixas que estão dentro do body. Ajusta na horizontal.*/
+    padding: 100px;
+    /* Espaço na parte interna da caixa div.*/
+    height: 100vh;
+    /* Preenche todo o espaço de altura da tela.*/
+
+}
+
+.caixa-principal {
+    width: 40%;
+    /*largura da caixa.*/
+}
+
+.caixa-video {
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+
+}
+
+video {
+
+    min-height: 100%;
+    /* O espaço mínimo que vai ocupar da altura da tela.*/
+    min-width: 100%;
+    /* O espaço mínimo que vai ocupar da largura da tela.*/
+    position: fixed;
+    top: 0;
+}
+
+p {
+    color: white;
+    font-size: 16px;
+    /* Altera o tamano da fonte. */
+    margin-top: 15px;
+
+}
+
+.mascara {
+
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+    /* Acessar https://cssgradient.io/ para gerar as cores gradientes.*/
+    position: fixed;
+    top: 0;
+
+}
+
+.link-whatsapp img {
+
+    height: 60px;
+    position: fixed;
+    /* Deixa a imagem em uma posião fixa na tela.*/
+    right: 20px;
+    bottom: 20px;
+
+}
+
+.header {
+
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    /* Distanciamento entre os itens.*/
+    margin: 30px;
+
+}
+
+
+
+.header img {
+
+    height: 60px;
+
+}
+
+.header a {
+
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    /*alterar o formato do cursor ao passar por cima do botão.*/
+
+}
+
+.header a:hover {
+
+    color: #C51111;
+    font-size: 26px;
+    transition: 0.5s ease-in-out;
+
+}
+
+.formulario-fale-conosco {
+
+    background-color: white;
+    /* Cor de fundo da caixa. */
+    display: flex;
+    /* Habilita algumas funções no display da caixa. */
+    gap: 20px;
+    /* Distanciamento entre os itens na vertical.*/
+    flex-direction: column;
+    /* Organiza os itens em colunas. */
+    position: fixed;
+    top: 30%;
+    left: -300px;
+    padding: 20px;
+    /* Distanciamento entre os itens da parte interna para parte externa da caixa ou div. */
+    border-radius: 5px;
+    /* Arredonda as bordas. */
+    transition: left 1s ease-in-out;
+    /* Transição no left, dura 1 segundo, na entrada e na saida. */
+
+}
+
+input {
+
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    /*Define a espessura, transparência, e cor da borda. */
+    padding-left: 5px;
+    /* Serve para distanciar os texos na parte interna do input. */
+    outline-color: #18D80F;
+    /* Altera a cor da borda da caixa do input, quando se clica nela para preencher. */
+
+}
+
+textarea {
+    width: 270px;
+    height: 100px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    /*Define a espessura, transparência, e cor da borda. */
+    padding-left: 5px;
+    /* Serve para distanciar os texos na parte interna do input. */
+    outline-color: #18D80F;
+    /* Altera a cor da borda da caixa do input, quando se clica nela para preencher. */
+
+}
+
+.mascara-formulario {
+
+    visibility: hidden;
+    /*Deixa a visibilidade escondida ou desativada.*/
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    /* Preenche todo o espaço da largura da tela. */
+    height: 100vh;
+    /* Preenche todo o espaço da altura da tela. */
+    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+    transition: visibility 1s ease-in-out;
+    /* Transição no visibility, dura 1 segundo, na entrada e na saida. */
+
+}
+
+/* Media query (RESPONSVIDADE)
+
+max-width -> Valor menor que Npx,, aplica o css do media.
+min-width -> Valor maior que Npx,, aplica o css do media.
+
+*/
+@media (max-width: 1100px) {
+    /* Abaixo de 1100px, o site terá as configuraões conforme determinado abaixo.*/
+
+    p {
+        display: none;
+    }
+
+    .caixa-mae {
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 10px;
+        
+
+    }
+
+    .caixa-principal {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .logo-mario-luigi {
+        width: 80vw;
+        height: auto;
+    }
+
+    .header {
+
+        margin: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .header img {
+        display: none;
+    }
+
+
+    .header a {
+        font-size: 19px;
+    }
+
+}
